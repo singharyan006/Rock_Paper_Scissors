@@ -2,63 +2,109 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
 
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Orbitron Google Font for the game title -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-    <!-- Navigation Bar -->
-    <header>
-        <nav class="navbar">
-            <!-- <div class="logo"></div> -->
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">How to Play</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- ===================== Navigation Bar ===================== -->
+  <header>
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#" id="how-to-play-link">How to Play</a></li>
+        <li><a href="#" id="about-link">About</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- Main Game Section -->
-    <main class="game-container">
-        <h1 class="game-title">ROCK PAPER SCISSORS</h1>
-        <div class="title-msg"><p>Challenge the computer! Best of five rounds.</p> Prove your luck and logic.
-        </div>
+  <!-- ===================== Main Game Section ===================== -->
+  <main class="game-container">
+    <!-- Game Title -->
+    <h1 class="game-title">ROCK PAPER SCISSORS</h1>
 
-        <div class="choice-container">
-            <div class="choice">
-                <button class="choice-btn">
-                    <img src="sources/rock.svg" alt="Rock" class="choice-icon"></button>
-                <div class="choice-label">Rock</div>
-            </div>
-            <div class="choice">
-                <button class="choice-btn">
-                    <img src="sources/paper.svg" alt="Paper" class="choice-icon"></button>
-                <div class="choice-label">Paper</div>
-            </div>
-            <div class="choice">
-                <button class="choice-btn">
-                    <img src="sources/scissor.svg" alt="Scissor" class="choice-icon"></button>
-                <div class="choice-label">Scissor</div>
-            </div>
-        </div>
-        <!-- Scoreboard -->
-        <div class="scoreboard">
-            <p> Player: <span id="player-score">0</span></p>
-            <!-- Round Result -->
-            <p> Computer: <span id="computer-score">0</span></p>
-        </div>
+    <!-- Game Subtitle -->
+    <div class="title-msg">
+      <p>Challenge the computer! Best of five rounds.</p> Prove your luck and logic.
+    </div>
 
-        <!-- Result -->
-        <div class="result" id="round-result"></div>
-        <!-- Play Again -->
-        <button class="play-again-btn" id="play-again" style="display: none;">Play Again</button>
-    </main>
-    <script src="script.js"></script>
+    <!-- Player Choices (Rock, Paper, Scissors) -->
+    <div class="choice-container">
+      <!-- Rock -->
+      <div class="choice">
+        <button class="choice-btn">
+          <img src="sources/rock.svg" alt="Rock" class="choice-icon" />
+        </button>
+        <div class="choice-label">Rock</div>
+      </div>
+
+      <!-- Paper -->
+      <div class="choice">
+        <button class="choice-btn">
+          <img src="sources/paper.svg" alt="Paper" class="choice-icon" />
+        </button>
+        <div class="choice-label">Paper</div>
+      </div>
+
+      <!-- Scissor -->
+      <div class="choice">
+        <button class="choice-btn">
+          <img src="sources/scissor.svg" alt="Scissor" class="choice-icon" />
+        </button>
+        <div class="choice-label">Scissor</div>
+      </div>
+    </div>
+
+    <!-- Scoreboard Section -->
+    <div class="scoreboard">
+      <p>Player: <span id="player-score">0</span></p>
+      <p>Computer: <span id="computer-score">0</span></p>
+    </div>
+
+    <!-- Round Result Text -->
+    <div class="result" id="round-result"></div>
+
+    <!-- Play Again Button (hidden by default) -->
+    <button class="play-again-btn" id="play-again" style="display: none;">Play Again</button>
+
+    <!-- ===================== How to Play Modal ===================== -->
+    <div id="how-to-play-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" id="close-modal">&times;</span>
+        <h2>How to Play</h2>
+        <p><strong>Objective:</strong> Beat the computer in 5 rounds!</p>
+        <ul>
+          <li>Rock beats Scissors</li>
+          <li>Paper beats Rock</li>
+          <li>Scissors beats Paper</li>
+          <li>Tie if both pick the same</li>
+        </ul>
+        <p><strong>Instructions:</strong> Click an icon (rock, paper, or scissors). The computer will randomly choose its move. The winner is announced each round. After 5 rounds, the final winner is declared.</p>
+      </div>
+    </div>
+
+    <!-- ===================== About Modal ===================== -->
+    <div id="about-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" id="close-about">&times;</span>
+        <h2>About This Game</h2>
+        <p>This Rock Paper Scissors game is a web-based implementation of the classic hand game between a player and the computer.</p>
+        <p><strong>Developer:</strong> Aryan Singh</p>
+        <p><strong>Tech Stack:</strong> HTML, CSS, JavaScript</p>
+        <p>Designed with a focus on aesthetics and user interaction. Future plans include adding sound effects, animations, and leaderboard functionality!</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Link to JavaScript File -->
+  <script src="script.js"></script>
 </body>
 
 </html>

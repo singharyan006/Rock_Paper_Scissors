@@ -1,147 +1,185 @@
-/* Reset & Base */
+/* ========== Reset & Base ========== */
+/* Remove default spacing and set box model for consistency */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: sans-serif;
-    background: linear-gradient(225deg, #03031f, #000000, #000000, #56094d);
-    color: #ffffff;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  font-family: sans-serif;
+  background: linear-gradient(225deg, #03031f, #000000, #000000, #56094d);
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Navbar */
+/* ========== Navigation Bar ========== */
 .navbar {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: #1fc2e7;
-    transition: color 0.3s;
+  text-decoration: none;
+  color: #1fc2e7;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #ff00c8;
+  color: #ff00c8;
 }
 
-/* Main Game Section */
+/* ========== Main Game Container ========== */
 .game-container {
-    text-align: center;
-    padding: 2rem 1rem;
-    max-width: 800px;
-    width: 100%;
+  text-align: center;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
 }
 
 .game-title {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 4rem;
-    color: #00d0ff;
-    margin: 2rem 2rem 0 2rem;
-    /* text-shadow: 0 0 10px #00f2ff; */
+  font-family: 'Orbitron', sans-serif;
+  font-size: 4rem;
+  color: #00d0ff;
+  margin: 2rem 2rem 0 2rem;
+  /* Optional glow effect:
+  text-shadow: 0 0 10px #00f2ff; */
 }
 
 .title-msg {
-    padding: 2rem 7rem;
-    font-size: large;
+  padding: 2rem 7rem;
+  font-size: large;
 }
 
+/* ========== Player Choices Section ========== */
 .choice-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
 }
 
 .choice {
-    text-align: center
+  text-align: center;
 }
 
 .choice-btn {
-    background: #fc0287;
-    padding: 20px;
-    border:2px solid  #1fc2e7;
-    border-radius: 70px;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s ease;
+  background: #fc0287;
+  padding: 20px;
+  border: 2px solid #1fc2e7;
+  border-radius: 70px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
 .choice-btn:hover {
-    background: #00f2ff;
-    color: #1a1a2e;
-    box-shadow: 0 0 15px #ff0084;
-    transform: scale(1.1);
+  background: #00f2ff;
+  color: #1a1a2e;
+  box-shadow: 0 0 15px #ff0084;
+  transform: scale(1.1);
 }
 
 .choice-icon {
-    width: 80px;
-    height: auto;
+  width: 80px;
+  height: auto;
 }
 
 .choice-label {
-    display: block;
-    margin-top: 0.5rem;
-    font-family: sans-serif;
-    color: white;
-    font-size: 1.05rem;
+  display: block;
+  margin-top: 0.5rem;
+  font-family: sans-serif;
+  color: white;
+  font-size: 1.05rem;
 }
 
-
-/* Scoreboard */
+/* ========== Scoreboard ========== */
 .scoreboard {
-    margin-bottom: 1.5rem;
-    font-size: 1.2rem;
-    color:  #1fc2e7;
-    display: flex;
-    justify-content: space-around;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: #1fc2e7;
+  display: flex;
+  justify-content: space-around;
 }
 
-/* Round Result */
+/* ========== Round Result ========== */
 .result {
-    width: 20rem;
-    font-size: 1rem;
-    padding: 1rem;
-    color: white;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid #1fc2e7;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #1fc2e7;
-    margin: 2rem auto;
-    text-align: center;
+  width: 20rem;
+  font-size: 1rem;
+  padding: 1rem;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid #1fc2e7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #1fc2e7;
+  margin: 2rem auto;
+  text-align: center;
 }
 
-/* Play Again Button */
+/* ========== Play Again Button ========== */
 .play-again-btn {
-    background-color: #fc0287;
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    font-size: 1.1rem;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px #ff00c8;
+  background-color: #fc0287;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #ff00c8;
 }
 
 .play-again-btn:hover {
-    background-color: #fc0287;
-    box-shadow: 0 0 20px #ff00c8;
+  background-color: #fc0287;
+  box-shadow: 0 0 20px #ff00c8;
+}
+
+/* ========== Modal Styles (How to Play / About) ========== */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #111;
+  color: #1fc2e7;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  text-align: left;
+  font-family: sans-serif;
+  box-shadow: 0 0 20px #1fc2e7;
+  position: relative;
+  line-height: 1.6;
+}
+
+.close-btn {
+  color: #ff00c8;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
 }
