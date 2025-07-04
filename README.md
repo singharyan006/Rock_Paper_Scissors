@@ -7,8 +7,7 @@ A web-based interactive **Rock Paper Scissors** game where you challenge the com
 ---
 ## 🌐 Live Demo
 
-> 🔗 [Play Now](https://singharyan006.github.io/Rock_Paper_Scissors/) – Challenge the computer right in your browser!
-
+> 🔗 [Play Now](https://rock-paper-scissors-aryan.netlify.app/) – Challenge the computer right in your browser!
 ---
 
 ## 🚀 Features
