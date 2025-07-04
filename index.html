@@ -1,11 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <!-- <div class="logo"></div> -->
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">How to Play</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Game Section -->
+    <main class="game-container">
+        <h1 class="game-title">ROCK PAPER SCISSORS</h1>
+        <div class="title-msg"><p>Challenge the computer! Best of five rounds.</p> Prove your luck and logic.
+        </div>
+
+        <div class="choice-container">
+            <div class="choice">
+                <button class="choice-btn">
+                    <img src="sources/rock.svg" alt="Rock" class="choice-icon"></button>
+                <div class="choice-label">Rock</div>
+            </div>
+            <div class="choice">
+                <button class="choice-btn">
+                    <img src="sources/paper.svg" alt="Paper" class="choice-icon"></button>
+                <div class="choice-label">Paper</div>
+            </div>
+            <div class="choice">
+                <button class="choice-btn">
+                    <img src="sources/scissor.svg" alt="Scissor" class="choice-icon"></button>
+                <div class="choice-label">Scissor</div>
+            </div>
+        </div>
+        <!-- Scoreboard -->
+        <div class="scoreboard">
+            <p> Player: <span id="player-score">0</span></p>
+            <!-- Round Result -->
+            <p> Computer: <span id="computer-score">0</span></p>
+        </div>
+
+        <!-- Result -->
+        <div class="result" id="round-result"></div>
+        <!-- Play Again -->
+        <button class="play-again-btn" id="play-again" style="display: none;">Play Again</button>
+    </main>
     <script src="script.js"></script>
 </body>
+
 </html>
